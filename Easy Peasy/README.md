@@ -9,6 +9,9 @@ Practice using tools such as Nmap and GoBuster to locate a hidden directory to g
 * Network Enumeration
 * Web Enumeration
 * Cryptography
+  * Base64
+  * Base62
+  * Binary
 * Web Poking
 * Brute Forcing (Hash)
 * Stegangraphy

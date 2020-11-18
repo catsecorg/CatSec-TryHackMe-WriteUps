@@ -8,6 +8,8 @@ Bond, James Bond. A guided CTF.
 
 * Network Enumeration
 * Cryptography
+  * HTML Entity
+  * Base64
 * Pop3 Enumeration
 * Brute Force (Pop3)
 * Stored Passwords & Keys

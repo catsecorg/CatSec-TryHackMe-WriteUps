@@ -9,6 +9,8 @@ What lies under the Willow Tree?
 * Network Enumeration
 * Web Poking
 * Cryptography
+  * RSA
+  * Hex
 * Brute Forcing (SSH)
 * Misconfigured Binaries
 * Stored Passwords & Keys

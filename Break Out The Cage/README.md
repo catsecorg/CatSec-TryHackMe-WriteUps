@@ -9,6 +9,8 @@ Help Cage bring back his acting career and investigate the nefarious goings on o
 * Network ENumeration
 * FTP Enumeration
 * Cryptography
+  * Base64
+  * Vigenère
 * Abusing SUID/GUID
 * Stored Passwords & Keys
 

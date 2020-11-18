@@ -14,6 +14,13 @@ A CTF based challenge to get your blood pumping...
 * Web Enumeration
 * SSL Enumeration
 * Cryptography
+  * Base32
+  * ROT11
+  * Binary
+  * Morse Code
+  * AES
+  * Vigenère
+  * Spoon
 * Brute Forcing (SSH)
 
 ## Task 1 Adventure Time

@@ -7,6 +7,8 @@ Walkthrough of OS Command Injection. Demonstrate OS Command Injection and explai
 ## Topic's
 
 * Command Injection Fundamentals
+* Blind Command Injection
+* Active Command Injection
 
 ## Introduction & Deploy
 

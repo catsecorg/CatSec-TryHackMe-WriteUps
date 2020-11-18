@@ -8,7 +8,6 @@ Overpass has been hacked! Can you analyse the attacker's actions and hack back i
 
 * Network Forensic
 * Code Injection
-* Cryptography
 * Brute Forcing (Hash)
 * Reverse Engineering (Go)
 * Misconfigured Binaries

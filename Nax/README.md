@@ -7,7 +7,6 @@ Identify the critical security flaw in the most powerful and trusted network mon
 ## Topic's
 
 * Network Enumeration
-* Cryptography
 * Steganography
 * CVE-2019-15949 - Nagios XI
 * Metasploit (nagios_xi_authenticated_rce)

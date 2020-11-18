@@ -12,6 +12,8 @@ Hack your way into this easy/medium level legendary TV series "Chuck" themed box
 * SMB Enumeration
 * Steganography
 * Cryptography
+  * Base64
+  * Vigenère
 * CVE-2017-16995 - Linux Kernel < 4.13.9
 
 ## Task 1 PWN

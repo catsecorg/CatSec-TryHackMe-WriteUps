@@ -8,6 +8,8 @@ Room for beginner Reverse Engineering CTF players
 
 * Reverse Engineering
 * Cryptography
+  * Base64
+  * Hex
 
 ```
 kali@kali:~/CTFs/tryhackme/Reversing ELF$ chmod +x crackme*

@@ -11,7 +11,6 @@ Don't underestimate the sly old fox... This room includes a competition with ove
 * Linux Enumeration
 * Brute Force (http-get)
 * Code Injection
-* Cryptography
 * Network Tunneling
 * Brute Force (SSH)
 * Misconfigured Binaries

@@ -6,7 +6,7 @@ An introduction to networking theory and basic networking tools
 
 ## Topic's
 
-* Networking
+* Network Fundamentals
 * Network Forensics
 * Network Enumaration
 

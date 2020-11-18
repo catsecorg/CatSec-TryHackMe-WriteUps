@@ -4,6 +4,10 @@ Access your own Kali Machine
 
 * [Kali Machine](https://tryhackme.com/room/kali)
 
+## Topic's
+
+* TryHackMe Tutorial
+
 ## Task 1 No OpenVPN access needed
 
 If you're using the Kali Machine, it removes the OpenVPN requirement! This is because the Kali machine is on the same network as the TryHackMe deployed machines.

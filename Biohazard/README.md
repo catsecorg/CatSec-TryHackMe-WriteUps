@@ -9,6 +9,13 @@ A CTF room based on the old-time survival horror game, Resident Evil. Can you su
 * Network Enumeration
 * Web Poking
 * Cryptography
+  * Base64
+  * Base32
+  * Vigenère
+  * ROT13
+  * Base58
+  * Binary
+  * Hex
 * FTP Enumeration
 * Steganography
 * Stored Passwords & Keys

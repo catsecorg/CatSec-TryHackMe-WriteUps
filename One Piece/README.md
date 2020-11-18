@@ -9,6 +9,14 @@ A CTF room based on the wonderful manga One Piece. Can you become the Pirate Kin
 * Steganography
 * Web Poking
 * Crypthography
+  * Base32
+  * Base64
+  * Base85
+  * Base91
+  * Morse Code
+  * Binary
+  * Hex
+* OSINT
 * Web Enumeration
 * Reverse Enigieering
 * Stored Passwords & Keys

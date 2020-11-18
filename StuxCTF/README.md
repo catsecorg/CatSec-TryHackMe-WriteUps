@@ -9,6 +9,7 @@ Crypto, serealization, priv scalation and more ...!
 * Network Enumeration
 * Web Poking
 * Cryptography
+  * AES
 * Local File Inclusion
 * Misconfigured Binaries
 

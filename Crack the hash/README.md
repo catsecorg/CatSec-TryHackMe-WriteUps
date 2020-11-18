@@ -6,7 +6,7 @@ Cracking hashes challenges
 
 ## Topic's
 
-* Cryptography
+* Brute Forcing
 
 ## Level 1
 

@@ -8,6 +8,8 @@ A basic steganography and cryptography challenge room based on the Cicada 3301 c
 
 * Steganography
 * Cryptography
+  * Base64
+  * Vigenère
 
 ## Task 1 Download!
 

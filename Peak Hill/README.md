@@ -9,6 +9,7 @@ Exercises in Python library abuse and some exploitation techniques
 * Network Enumeration
 * FTP Enumeration
 * Cryptography
+  * Binary
 * Python Scripting (Decoder)
 * Reverse Enginierung
 * Misconfigured Binaries

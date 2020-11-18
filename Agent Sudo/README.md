@@ -12,6 +12,7 @@ You found a secret server located under the deep sea. Your task is to hack insid
 * Brute Forcing (Zip)
 * Steganography
 * Cryptography
+  * Base64
 * OSINT
 * CVE-2019-14287 - Sudo < 1.8.28
 

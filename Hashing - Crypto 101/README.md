@@ -6,7 +6,6 @@ An introduction to Hashing, as part of a series on crypto
 
 ## Topic's
 
-* Cryptography
 * Brute Forcing
 
 ## Task 1 Key Terms

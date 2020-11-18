@@ -6,7 +6,7 @@ This room aims at providing the basic introduction to XML External entity(XXE vu
 
 ## Topic's
 
-* XML Enumeration
+* XML Fundamentals
 * XML External Entity (XXE)
 
 ## Task 1 Deploy the VM

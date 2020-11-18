@@ -13,6 +13,7 @@ I hope you have fun.
 * Brute Forcing (FTP)
 * Brute Forcing (SSH)
 * Cryptography
+  * Base64
 * Misconfigured Binaries
 
 ## Task 1 Mnemonic
