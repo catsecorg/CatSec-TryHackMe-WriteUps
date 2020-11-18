@@ -402,6 +402,9 @@ user@debian:~/tools/mysql-udf$
 ```
 
 1. Run the "id" command as the newroot user. What is the result?
+```
+uid=0(root) gid=0(root) groups=0(root)
+```
 
 ## Sudo - Shell Escape Sequences
 
