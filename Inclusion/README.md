@@ -187,3 +187,6 @@ cat root.txt
 ```
 
 `42964104845495153909`
+
+Root FLAG
+```d8d4fd91665a6235a534c2caff29f55d```

@@ -621,4 +621,6 @@ ip -s neigh
 ```
 
 6. What flag is transmitted from flag_server to flag_client over UDP? {FLAG:UDP:XXX}
+```{FLAG:UDP:3bb271d020df6cbe599a46d20e9fcb3c}```
 7. What flag is transmitted from flag_server to flag_client over TCP? {FLAG:TCP:XXX}
+```{FLAG:TCP:8fb04648d6b2bd40af6581942fcf483e}```
